@@ -1,3 +1,15 @@
 h2 {
   color: indigo
 }
+
+/* with rgb */
+p {
+  color: rgb(122, 10, 31);
+  background-color: rgb(125,125,125)
+}
+
+/* with hexadecimal */
+button {
+  color: #dde297;
+  background-color: #48b869;
+}
