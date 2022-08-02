@@ -1,0 +1,32 @@
+div {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+#one {
+  background-color: #1C3879;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+  /* box-sizing: border-box; */
+}
+
+
+#two {
+  background-color: #607EAA;
+  border-width: 3px;
+  border-color: aquamarine;
+  border-style: dotted;
+}
+
+#three {
+  background-color: #EAE3D2;
+  border: 4px dashed black;
+  border-left:6px dotted #1C3879;
+  border-radius: 30px;
+}
