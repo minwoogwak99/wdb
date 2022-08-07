@@ -10,3 +10,16 @@ div {
   height: 50%;
   margin-left: 25%;
 }
+
+h1 {
+  font-size: 40px;
+  border: 1px solid black;
+  line-height: 200%;
+}
+
+button {
+  font-size: 30px;
+  padding: 0 30px;
+  border-radius: 15px;
+  background-color: #264653;
+}
