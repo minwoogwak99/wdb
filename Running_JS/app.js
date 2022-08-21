@@ -1,7 +1,18 @@
-console.log("BEFORE CONDITIONAL");
-let random = Math.floor(Math.random() * 5);
-if (random >= 2) {
-  console.log(`the rnadom number is ${random} \nit is greater or equal than 2`);
-} else {
-  console.log("it is not greater than equal than 2");
+let maximum = parseInt(prompt("enter the maximum value"));
+while (!maximum) {
+  maximum = parseInt(prompt("enter a valid number!"));
 }
+
+let targetNum = Math.floor(Math.random() * maximum) + 1;
+console.log(targetNum);
+
+let guess = parseInt(prompt("enter your first guess"));
+while (guess !== targetNum) {
+  if (guess < targetNum) {
+    guess = parseInt(prompt("too low! enter a new guess"));
+  } else {
+    guess = parseInt(prompt("too high! enter a new guess!"));
+  }
+}
+
+console.log("you got it!");
