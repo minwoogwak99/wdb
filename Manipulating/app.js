@@ -34,3 +34,9 @@ for (let link of allLinks) {
   link.style.textDecorationColor = "magenta";
   link.style.textDecorationStyle = "wavy";
 }
+
+/**
+ * get element by query selector
+ */
+const paragraph = document.querySelector('p')
+console.log(paragraph)
