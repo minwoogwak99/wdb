@@ -40,3 +40,14 @@ for (let link of allLinks) {
  */
 const paragraph = document.querySelector('p')
 console.log(paragraph)
+
+/**
+ * get element by query selector all
+ */
+const paragraph2 = document.querySelectorAll('p')
+console.log(paragraph2)
+
+// innertext
+console.log('==================INNER TEXT==================')
+const inn = document.querySelector('p').innerText
+console.log(inn)
