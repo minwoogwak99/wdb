@@ -51,3 +51,6 @@ console.log(paragraph2)
 console.log('==================INNER TEXT==================')
 const inn = document.querySelector('p').innerText
 console.log(inn)
+
+//innerHTML
+//can cahnge the content of the html with html syntax
