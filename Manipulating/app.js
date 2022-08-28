@@ -1,8 +1,18 @@
+/**
+ * querySelectorAll with innerText attribute
+ */
 const allLinks = document.querySelectorAll("a");
 
 // for (let link of allLinks) {
-//     link.innerText = 'I AM A LINK!!!!'
+//   link.innerText = "I AM A LINK!!!!";
 // }
+
+// change style
+for (let link of allLinks) {
+  link.style.color = "purple";
+  link.style.textDecorationColor = "magenta";
+  link.style.textDecorationStyle = "wavy";
+}
 
 /**
  * get element by id
@@ -10,7 +20,7 @@ const allLinks = document.querySelectorAll("a");
 
 const toc = document.getElementById("toc");
 console.log(`=======ALL ELEMENT OF IMAGE SOURCE USING TAG NAME==========`);
-console.dir(toc)
+console.dir(toc);
 /**
  * get element by tag name
  */
@@ -29,28 +39,36 @@ for (let img of allImages2) {
   console.log(img.src);
 }
 
-for (let link of allLinks) {
-  link.style.color = "rgb(0, 108, 134)";
-  link.style.textDecorationColor = "magenta";
-  link.style.textDecorationStyle = "wavy";
-}
-
 /**
  * get element by query selector
  */
-const paragraph = document.querySelector('p')
-console.log(paragraph)
+const paragraph = document.querySelector("p");
+console.log(paragraph);
 
 /**
  * get element by query selector all
  */
-const paragraph2 = document.querySelectorAll('p')
-console.log(paragraph2)
+const paragraph2 = document.querySelectorAll("p");
+console.log(paragraph2);
 
 // innertext
-console.log('==================INNER TEXT==================')
-const inn = document.querySelector('p').innerText
-console.log(inn)
+console.log("==================INNER TEXT==================");
+const inn = document.querySelector("p").innerText;
+console.log(inn);
 
 //innerHTML
 //can cahnge the content of the html with html syntax
+
+//class list
+const h2 = document.querySelector("h2");
+h2.classList.add("border"); // add the clas  
+h2.classList.remove("purple"); // remove the class
+console.log(h2.classList);
+h2.classList.toggle("purple"); // toggle on the class
+
+// Traversing parent/child/Sibling
+//parentElement
+ 
+const firstBold = document.querySelector('b');
+console.log('=====parent of firstBold');
+console.log(firstBold.parentElement)
