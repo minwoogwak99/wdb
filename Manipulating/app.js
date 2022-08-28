@@ -82,3 +82,14 @@ newImg.src =
   "https://images.unsplash.com/photo-1661529220663-8e17baaf3044?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1970&q=80";
 newImg.classList.add('square');
 document.body.appendChild(newImg);
+
+
+//remove element
+// remove()   vs    removeChild()
+const img3 = document.querySelector('img');
+//remove with removeChild()
+// img3.parentElement.removeChild(img3);
+
+//remove with remove() itself
+// img3.remove()
+
