@@ -61,14 +61,24 @@ console.log(inn);
 
 //class list
 const h2 = document.querySelector("h2");
-h2.classList.add("border"); // add the clas  
+h2.classList.add("border"); // add the clas
 h2.classList.remove("purple"); // remove the class
 console.log(h2.classList);
 h2.classList.toggle("purple"); // toggle on the class
 
 // Traversing parent/child/Sibling
 //parentElement
- 
-const firstBold = document.querySelector('b');
-console.log('=====parent of firstBold');
-console.log(firstBold.parentElement)
+
+const firstBold = document.querySelector("b");
+console.log("=====parent of firstBold");
+console.log(firstBold.parentElement);
+
+// Creating Element
+//createElement()
+
+const newImg = document.createElement("img");
+console.dir(newImg);
+newImg.src =
+  "https://images.unsplash.com/photo-1661529220663-8e17baaf3044?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1970&q=80";
+newImg.classList.add('square');
+document.body.appendChild(newImg);
