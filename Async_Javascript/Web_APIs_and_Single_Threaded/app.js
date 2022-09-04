@@ -9,9 +9,23 @@ sending request to server..
 end of the file!
 data from the server.... */
 
-setTimeout(() => {
+/* setTimeout(() => {
   document.body.style.backgroundColor = "red";
   setTimeout(() => {
     document.body.style.backgroundColor = "orange";
   }, 1000);
-}, 1000);
+}, 1000); 
+instead of this, use a function below to activate the same functionality*/
+
+const delayColorChanger = (delay, color, next) => {
+  setTimeout(() => {
+    document.body.style.backgroundColor = color;
+    next();
+  }, delay);
+}
+
+delayColorChanger(1000, 'red', () => {
+  delayColorChanger(1000, 'orange', () => {
+
+  })
+})
