@@ -58,30 +58,33 @@ const fakeRequestPromise = (url) => {
   }
 ); */
 
-fakeRequestPromise("books.com/page1")
-  .then(() => {
-    console.log("worked for page 1");
-    fakeRequestPromise("books.com/page2")
-      .then(() => {
-        console.log("worked for page 2");
-      })
-      .catch(() => {
-        console.log("err for page 2");
-      });
-  })
-  .catch(() => {
-    console.log("err for page 1");
-  });
+// fakeRequestPromise("books.com/page1")
+//   .then(() => {
+//     console.log("worked for page 1");
+//     fakeRequestPromise("books.com/page2")
+//       .then(() => {
+//         console.log("worked for page 2");
+//       })
+//       .catch(() => {
+//         console.log("err for page 2");
+//       });
+//   })
+//   .catch(() => {
+//     console.log("err for page 1");
+//   });
 
 //this is same as above but more clean!!
 fakeRequestPromise("apps.com/page1")
-  .then(() => {
+  .then((data) => {
+    console.log(data);
     console.log("worked for page 1");
     return fakeRequestPromise("apps.com/page2");
   })
-  .then(() => {
+  .then((data) => {
+    console.log(data);
     console.log("worked for page 2");
   })
-  .catch(() => {
+  .catch((data) => {
+    console.log(data);
     console.log("failed for the task");
   });
