@@ -1,0 +1,15 @@
+div {
+  display: inline-block;
+  border: 2px solid black;
+  justify-content: space-between;
+  margin: 10px auto;
+  background-image: linear-gradient(#ad5389, #3c1053);
+  padding: 10px 10px;
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+}
+
+body {
+  background-color: #645CAA;
+}
