@@ -4,6 +4,7 @@ const port = 3000;
 
 app.use((req, res) => {
   console.log("NEW REQUEST");
+  res.send("<h1>This is response from a server</h1>")
 });
 
 app.listen(port, () => {
