@@ -26,16 +26,25 @@ app.get("/dogs", (req, res) => {
 
 app.get("/r/:subreddit/:postID", (req, res) => {
   console.log(req.params);
-  const subreddit = req.params["subreddit"];
-  const postID = req.params["postID"];
+  const { subreddit, postID } = req.params;
 
   res.send(`Browsing for ${subreddit} subreddit on ${postID}`);
 });
 
-app.listen(port, () => {
-  console.log("listening on port 3000");
+app.get("/search", (req, res) => {
+  console.log(req.query);
+  const { q } = req.query;
+  if (!q) {
+    res.send("NOTHING FOUND IF NOTHING SEARCHED");
+  } else {
+    res.send(`Search result for ${req.query.q}`);
+  }
 });
 
 app.get("*", (req, res) => {
   res.send(`Connect to the valid address`);
+});
+
+app.listen(port, () => {
+  console.log("listening on port 3000");
 });
