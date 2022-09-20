@@ -24,6 +24,14 @@ app.get("/dogs", (req, res) => {
   res.send("WOOOF!!");
 });
 
+app.get("/r/:subreddit/:postID", (req, res) => {
+  console.log(req.params);
+  const subreddit = req.params["subreddit"];
+  const postID = req.params["postID"];
+
+  res.send(`Browsing for ${subreddit} subreddit on ${postID}`);
+});
+
 app.listen(port, () => {
   console.log("listening on port 3000");
 });
