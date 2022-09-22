@@ -11,6 +11,22 @@
 <body>
   <h1>Your random number: <%= rand %>
   </h1>
+  <!--OPTION 1-->
+  <%if (rand % 2==0) { %>
+    <h2>This is even number</h2>
+    <% } else { %>
+      <h2>This is odd number</h2>
+      <% } %>
+
+        <!--OPTION 2-->
+        <h3>
+          <%= rand%2===0 ? 'EVEN NUMBER' : 'ODD NUMBER' %>
+        </h3>
+
+
+
+
+
 </body>
 
 </html>
