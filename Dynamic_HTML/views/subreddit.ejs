@@ -6,13 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    <%= subreddit %>
+    <%= name %>
   </title>
 </head>
 
 <body>
-  <h1>Browsing subreddit: <%= subreddit %>
+  <h1>Browsing subreddit: <%= name %>
   </h1>
+  <h2>
+    <%= description %>
+  </h2>
+  <p>Subscribers: <%= subscribers%>
+  </p>
+  <hr>
+  <hr>
+
+  <% for(let post of posts) { %>
+    <article>
+      <% if(post.img) {%>
+        <img src=<%=post.img %> alt=<%= name %> >
+          <% } %>
+            <p>
+              <b>Title:</b>
+              <%= post.title %>
+            </p>
+            <p>
+              <b>Author</b>
+              <%= post.author %>
+            </p>
+            <hr>
+            <% } %>
+    </article>
+
 </body>
 
 </html>
