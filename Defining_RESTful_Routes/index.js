@@ -20,6 +20,12 @@ app.get("/comments/new", (req, res) => {
   res.render("comments/new");
 });
 
+app.get("/comments/:id/edit", (req, res) => {
+  const { id } = req.params;
+  const comment = comments.find((c) => c.id === id);
+  res.render("comments/edit", { comment });
+});
+
 app.get("/comments/:id", (req, res) => {
   const { id } = req.params;
   const comment = comments.find((c) => c.id === id);
@@ -40,7 +46,7 @@ app.get("/comments", (req, res) => {
 app.patch("/comments/:id", (req, res) => {
   const { id } = req.params;
   const newCommentText = req.body.comment;
-  console.log('new:',newCommentText);
+  console.log("new:", newCommentText);
   const foundcomment = comments.find((c) => c.id === id);
   console.log(foundcomment);
   foundcomment.comment = newCommentText;
