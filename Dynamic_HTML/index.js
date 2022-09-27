@@ -4,13 +4,12 @@ const app = express();
 const redditData = require("./data.json");
 
 app.use(express.static(path.join(__dirname, "public")));
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 //home
 app.get("/", (req, res) => {
-  res.render("home.ejs", {title: 'HOME'});
+  res.render("home.ejs", { title: "HOME" });
 });
 
 //cats
@@ -30,10 +29,10 @@ app.get("/r/:subreddit", (req, res) => {
   }
 });
 
-//Random 
+//Random
 app.get("/rand", (req, res) => {
   const randNum = Math.floor(Math.random() * 10) + 1;
-  res.render("random.ejs", { randNum, title: 'random'});
+  res.render("random.ejs", { randNum, title: "random" });
 });
 
 app.listen(3000, () => {
